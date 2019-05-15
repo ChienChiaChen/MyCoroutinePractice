@@ -17,7 +17,8 @@ class MyListFragment : ListFragment() {
             LESSON_PARALLEL,
             LESSON_LIFECYCLE,
             LESSON_EXCEPTION,
-            LESSON_EXCEPTION_HANDLER
+            LESSON_EXCEPTION_HANDLER,
+            LESSON_CANCEL
         )
 
         listAdapter = ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, list)
@@ -29,6 +30,7 @@ class MyListFragment : ListFragment() {
                 LESSON_LIFECYCLE -> showFragment(LifecycleAwareFragment(), LifecycleAwareFragment.TAG)
                 LESSON_EXCEPTION -> showFragment(ExceptionFragment(), ExceptionFragment.TAG)
                 LESSON_EXCEPTION_HANDLER -> showFragment(ExceptionHandlerFragment(), ExceptionHandlerFragment.TAG)
+                LESSON_CANCEL -> showFragment(CancelFragment(), CancelFragment.TAG)
             }
         }
     }
@@ -48,6 +50,6 @@ class MyListFragment : ListFragment() {
         private const val LESSON_LIFECYCLE = "4. Lifecycle Awareness (LifecycleObserver)"
         private const val LESSON_EXCEPTION = "5. Exception Handling (try/catch)"
         private const val LESSON_EXCEPTION_HANDLER = "6. Exception Handling (handler)"
-
+        private const val LESSON_CANCEL = "7. Cancel"
     }
 }
